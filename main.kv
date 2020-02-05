@@ -1,0 +1,97 @@
+#:import MDBottomNavigation kivymd.tabs.MDBottomNavigation
+#:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import MDCard kivymd.card.MDCard
+#:import MDList kivymd.list.MDList
+#:import MDNavigationDrawer kivymd.navigationdrawer.MDNavigationDrawer
+BoxLayout:
+    orientation:'vertical'
+    Toolbar:
+        title: "AgroBean"
+        md_bg_color:app.theme_cls.primary_color   
+
+    MDBottomNavigation:
+        id: changer
+        #this is a fancy ScreenManager
+        MDBottomNavigationItem:
+            #this is a fancy screen1
+            text: "Home"
+            name: "screen1"
+            icon: "plus"
+            Button:
+                size_hint: 1, 0.2
+                on_press:root.get_data1()
+
+                   
+                    
+        MDBottomNavigationItem:
+            #this is a fancy screen2
+            text: "Community"
+            name: "screen2"
+            icon: "bluetooth"
+            BoxLayout:
+                orientation:"vertical"
+                Button:
+                    text: "Community"
+            
+        MDBottomNavigationItem:
+            #this is a fancy screen3
+            text: "Guide"
+            name: "screeen3"
+            icon: "beer"
+            BoxLayout:
+                Button:
+                    text: "Guide"
+        MDBottomNavigationItem:
+            #this is a fancy screen4
+            text: "Library"
+            name: "screeen4"
+            icon: "blender"
+            
+            BoxLayout:
+                orientation:'vertical'
+                padding: dp(8)
+                height: dp(1000)
+                
+                ScrollView:
+                    do_scroll_x: False
+                    MDCard:
+                        size_hint: None, None
+                        size: dp(320), dp(180)
+                        Image:
+                            source: "out.png"
+                            #size_hint_y: .8
+                        MDLabel:
+                            font_style: 'Body1'
+                            theme_text_color: 'Primary'
+                            text: "out.png"
+                            #size_hint_y: .2
+                            
+                        
+                    
+                    
+
+                            
+                       
+                                   
+                            
+                        
+                                
+                            
+                                
+                            
+                            
+                            
+                        
+                    
+                    
+                            
+                            
+                                
+                            
+                        
+                                
+                        
+                    
+
+            
